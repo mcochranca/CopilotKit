@@ -25,7 +25,9 @@
     "dev": "tsup --watch --no-splitting",
     "test": "jest",
     "check-types": "tsc --noEmit",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf .next"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf .next",
+    "prepare": "pnpm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "peerDependencies": {
     "react": "^18.2.0"
@@ -71,6 +73,8 @@
     "slate": "^0.94.1",
     "slate-history": "^0.93.0",
     "slate-react": "^0.98.1",
-    "tailwind-merge": "^1.13.2"
-  }
+    "tailwind-merge": "^1.13.2",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
